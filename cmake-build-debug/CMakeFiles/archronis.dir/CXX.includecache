@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Peter/CLionProjects/archronis/Headers/read_bytes.h
+fstream
+-
+
+/Users/Peter/CLionProjects/archronis/main.cpp
+iostream
+-
+Headers/read_bytes.h
+/Users/Peter/CLionProjects/archronis/Headers/read_bytes.h
+fstream
+-
+
