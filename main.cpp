@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Headers/read_bytes.h"
+#include "Headers/lz77.h"
 #include <fstream>
 
 /*
@@ -10,8 +10,7 @@
 using namespace std;
 
 int main() {
-    Read_bytes reader;
-    string s;
-    s = reader.read("/Users/Peter/CLionProjects/archronis/for_tests");
-    cout << s << endl;
+    LZ77 lz77 = *(new LZ77);
+    lz77.encode("asdasdas");
+
 }

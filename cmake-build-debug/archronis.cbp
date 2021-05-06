@@ -80,10 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/read_bytes.h">
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/compressed_data.h">
 			<Option target="archronis"/>
 		</Unit>
-		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/read_bytes.cpp">
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/lz77.h">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/node.h">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/read_files.h">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/compressed_data.cpp">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/lz77.cpp">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/node.cpp">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/read_files.cpp">
 			<Option target="archronis"/>
 		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/main.cpp">

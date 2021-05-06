@@ -93,12 +93,12 @@ clean: CMakeFiles/archronis.dir/clean
 CMakeFiles/archronis.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target archronis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target archronis"
 .PHONY : CMakeFiles/archronis.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/archronis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/archronis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/archronis.dir/rule

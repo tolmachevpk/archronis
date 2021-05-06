@@ -1,5 +1,5 @@
-#ifndef ARCHRONIS_READ_BYTES_H
-#define ARCHRONIS_READ_BYTES_H
+#ifndef ARCHRONIS_READ_FILES_H
+#define ARCHRONIS_READ_FILES_H
 
 #include <fstream>
 
@@ -10,7 +10,7 @@ public:
 private:
     void read_file(std::ifstream &fin, std::string &res); // for only binary mode
     void add_header(std::string &res, const std::string &path);
-    std::string int_to_bytes(const unsigned long long &len);
+    std::string int_to_bytes(const long long &len);
 };
 
-#endif //ARCHRONIS_READ_BYTES_H
+#endif //ARCHRONIS_READ_FILES_H

@@ -1,14 +1,14 @@
-#include "../Headers/read_bytes.h"
+#include "../Headers/read_files.h"
 #include <iostream>
 
 // Здесь пробовал красивое решение с битовыми операциями, но начиная с (255 << 24) выдавались
 // неверные результаты
-std::string Read_bytes::int_to_bytes(const unsigned long long &len) {
+std::string Read_bytes::int_to_bytes(const long long &len) {
     unsigned long long val;
     val = 256 * 256 * 256;
     val = val * 256 * 256 * 256 * 256;
     unsigned long long byte = 255 * val;
-    std::string res = "";
+    std::string res;
     for (int i = 7; i >= 0; i--) {
         res.push_back(static_cast<char>( (len & byte) / val));
         val /= 256;
@@ -21,8 +21,8 @@ void Read_bytes::add_header(std::string &res, const std::string &path) {
     std::string filename = std::filesystem::path(path).filename();
     int filename_length = filename.length();
     res.append(filename);
-    res.append(std::string(150 - filename_length, ' '));
-    res.append(int_to_bytes(static_cast<unsigned long long>(file_size(std::filesystem::path(path)))) );
+    res.append(std::string(150 - filename_length, '\0'));
+    res.append(int_to_bytes(static_cast<long long>(file_size(std::filesystem::path(path)))) );
 }
 
 std::string Read_bytes::read(const std::string &name) {

@@ -142,32 +142,113 @@ archronis/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/build
 .PHONY : archronis/fast
 
-Sources/read_bytes.o: Sources/read_bytes.cpp.o
+Sources/compressed_data.o: Sources/compressed_data.cpp.o
 
-.PHONY : Sources/read_bytes.o
+.PHONY : Sources/compressed_data.o
 
 # target to build an object file
-Sources/read_bytes.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_bytes.cpp.o
-.PHONY : Sources/read_bytes.cpp.o
+Sources/compressed_data.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/compressed_data.cpp.o
+.PHONY : Sources/compressed_data.cpp.o
 
-Sources/read_bytes.i: Sources/read_bytes.cpp.i
+Sources/compressed_data.i: Sources/compressed_data.cpp.i
 
-.PHONY : Sources/read_bytes.i
+.PHONY : Sources/compressed_data.i
 
 # target to preprocess a source file
-Sources/read_bytes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_bytes.cpp.i
-.PHONY : Sources/read_bytes.cpp.i
+Sources/compressed_data.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/compressed_data.cpp.i
+.PHONY : Sources/compressed_data.cpp.i
 
-Sources/read_bytes.s: Sources/read_bytes.cpp.s
+Sources/compressed_data.s: Sources/compressed_data.cpp.s
 
-.PHONY : Sources/read_bytes.s
+.PHONY : Sources/compressed_data.s
 
 # target to generate assembly for a file
-Sources/read_bytes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_bytes.cpp.s
-.PHONY : Sources/read_bytes.cpp.s
+Sources/compressed_data.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/compressed_data.cpp.s
+.PHONY : Sources/compressed_data.cpp.s
+
+Sources/lz77.o: Sources/lz77.cpp.o
+
+.PHONY : Sources/lz77.o
+
+# target to build an object file
+Sources/lz77.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/lz77.cpp.o
+.PHONY : Sources/lz77.cpp.o
+
+Sources/lz77.i: Sources/lz77.cpp.i
+
+.PHONY : Sources/lz77.i
+
+# target to preprocess a source file
+Sources/lz77.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/lz77.cpp.i
+.PHONY : Sources/lz77.cpp.i
+
+Sources/lz77.s: Sources/lz77.cpp.s
+
+.PHONY : Sources/lz77.s
+
+# target to generate assembly for a file
+Sources/lz77.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/lz77.cpp.s
+.PHONY : Sources/lz77.cpp.s
+
+Sources/node.o: Sources/node.cpp.o
+
+.PHONY : Sources/node.o
+
+# target to build an object file
+Sources/node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/node.cpp.o
+.PHONY : Sources/node.cpp.o
+
+Sources/node.i: Sources/node.cpp.i
+
+.PHONY : Sources/node.i
+
+# target to preprocess a source file
+Sources/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/node.cpp.i
+.PHONY : Sources/node.cpp.i
+
+Sources/node.s: Sources/node.cpp.s
+
+.PHONY : Sources/node.s
+
+# target to generate assembly for a file
+Sources/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/node.cpp.s
+.PHONY : Sources/node.cpp.s
+
+Sources/read_files.o: Sources/read_files.cpp.o
+
+.PHONY : Sources/read_files.o
+
+# target to build an object file
+Sources/read_files.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_files.cpp.o
+.PHONY : Sources/read_files.cpp.o
+
+Sources/read_files.i: Sources/read_files.cpp.i
+
+.PHONY : Sources/read_files.i
+
+# target to preprocess a source file
+Sources/read_files.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_files.cpp.i
+.PHONY : Sources/read_files.cpp.i
+
+Sources/read_files.s: Sources/read_files.cpp.s
+
+.PHONY : Sources/read_files.s
+
+# target to generate assembly for a file
+Sources/read_files.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_files.cpp.s
+.PHONY : Sources/read_files.cpp.s
 
 main.o: main.cpp.o
 
@@ -205,9 +286,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... archronis"
-	@echo "... Sources/read_bytes.o"
-	@echo "... Sources/read_bytes.i"
-	@echo "... Sources/read_bytes.s"
+	@echo "... Sources/compressed_data.o"
+	@echo "... Sources/compressed_data.i"
+	@echo "... Sources/compressed_data.s"
+	@echo "... Sources/lz77.o"
+	@echo "... Sources/lz77.i"
+	@echo "... Sources/lz77.s"
+	@echo "... Sources/node.o"
+	@echo "... Sources/node.i"
+	@echo "... Sources/node.s"
+	@echo "... Sources/read_files.o"
+	@echo "... Sources/read_files.i"
+	@echo "... Sources/read_files.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

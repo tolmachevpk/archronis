@@ -6,15 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/Peter/CLionProjects/archronis/Headers/read_bytes.h
+/Users/Peter/CLionProjects/archronis/Headers/lz77.h
+read_files.h
+/Users/Peter/CLionProjects/archronis/Headers/read_files.h
+node.h
+/Users/Peter/CLionProjects/archronis/Headers/node.h
+iostream
+-
+
+/Users/Peter/CLionProjects/archronis/Headers/node.h
+
+/Users/Peter/CLionProjects/archronis/Headers/read_files.h
 fstream
 -
 
-/Users/Peter/CLionProjects/archronis/main.cpp
-iostream
--
-Headers/read_bytes.h
-/Users/Peter/CLionProjects/archronis/Headers/read_bytes.h
-fstream
--
+/Users/Peter/CLionProjects/archronis/Sources/lz77.cpp
+../Headers/lz77.h
+/Users/Peter/CLionProjects/archronis/Headers/lz77.h
 
