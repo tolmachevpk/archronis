@@ -5,9 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/Peter/CLionProjects/archronis/Sources/compressed_data.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/compressed_data.cpp.o"
+  "/Users/Peter/CLionProjects/archronis/Sources/converter_int_bits.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o"
   "/Users/Peter/CLionProjects/archronis/Sources/lz77.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/lz77.cpp.o"
   "/Users/Peter/CLionProjects/archronis/Sources/node.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/node.cpp.o"
   "/Users/Peter/CLionProjects/archronis/Sources/read_files.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/read_files.cpp.o"
+  "/Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o"
   "/Users/Peter/CLionProjects/archronis/main.cpp" "/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles/archronis.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

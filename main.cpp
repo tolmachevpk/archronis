@@ -11,6 +11,11 @@ using namespace std;
 
 int main() {
     LZ77 lz77 = *(new LZ77);
-    lz77.encode("asdasdas");
-
+    if (false) {
+        lz77.encode("/Users/Peter/CLionProjects/archronis/for_tests",
+                    "/Users/Peter/CLionProjects/archronis/for_tests", "my_archive.tpk");
+    } else {
+        lz77.decode("/Users/Peter/CLionProjects/archronis/for_tests/my_archive.tpk",
+                    "/Users/Peter/CLionProjects/archronis/for_tests/");
+    }
 }

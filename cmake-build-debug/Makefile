@@ -169,6 +169,33 @@ Sources/compressed_data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/compressed_data.cpp.s
 .PHONY : Sources/compressed_data.cpp.s
 
+Sources/converter_int_bits.o: Sources/converter_int_bits.cpp.o
+
+.PHONY : Sources/converter_int_bits.o
+
+# target to build an object file
+Sources/converter_int_bits.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o
+.PHONY : Sources/converter_int_bits.cpp.o
+
+Sources/converter_int_bits.i: Sources/converter_int_bits.cpp.i
+
+.PHONY : Sources/converter_int_bits.i
+
+# target to preprocess a source file
+Sources/converter_int_bits.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.i
+.PHONY : Sources/converter_int_bits.cpp.i
+
+Sources/converter_int_bits.s: Sources/converter_int_bits.cpp.s
+
+.PHONY : Sources/converter_int_bits.s
+
+# target to generate assembly for a file
+Sources/converter_int_bits.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.s
+.PHONY : Sources/converter_int_bits.cpp.s
+
 Sources/lz77.o: Sources/lz77.cpp.o
 
 .PHONY : Sources/lz77.o
@@ -250,6 +277,33 @@ Sources/read_files.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/read_files.cpp.s
 .PHONY : Sources/read_files.cpp.s
 
+Sources/write_files_from_archive.o: Sources/write_files_from_archive.cpp.o
+
+.PHONY : Sources/write_files_from_archive.o
+
+# target to build an object file
+Sources/write_files_from_archive.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o
+.PHONY : Sources/write_files_from_archive.cpp.o
+
+Sources/write_files_from_archive.i: Sources/write_files_from_archive.cpp.i
+
+.PHONY : Sources/write_files_from_archive.i
+
+# target to preprocess a source file
+Sources/write_files_from_archive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.i
+.PHONY : Sources/write_files_from_archive.cpp.i
+
+Sources/write_files_from_archive.s: Sources/write_files_from_archive.cpp.s
+
+.PHONY : Sources/write_files_from_archive.s
+
+# target to generate assembly for a file
+Sources/write_files_from_archive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archronis.dir/build.make CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.s
+.PHONY : Sources/write_files_from_archive.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -289,6 +343,9 @@ help:
 	@echo "... Sources/compressed_data.o"
 	@echo "... Sources/compressed_data.i"
 	@echo "... Sources/compressed_data.s"
+	@echo "... Sources/converter_int_bits.o"
+	@echo "... Sources/converter_int_bits.i"
+	@echo "... Sources/converter_int_bits.s"
 	@echo "... Sources/lz77.o"
 	@echo "... Sources/lz77.i"
 	@echo "... Sources/lz77.s"
@@ -298,6 +355,9 @@ help:
 	@echo "... Sources/read_files.o"
 	@echo "... Sources/read_files.i"
 	@echo "... Sources/read_files.s"
+	@echo "... Sources/write_files_from_archive.o"
+	@echo "... Sources/write_files_from_archive.i"
+	@echo "... Sources/write_files_from_archive.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

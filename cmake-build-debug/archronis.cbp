@@ -83,6 +83,9 @@
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/compressed_data.h">
 			<Option target="archronis"/>
 		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h">
+			<Option target="archronis"/>
+		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/lz77.h">
 			<Option target="archronis"/>
 		</Unit>
@@ -92,7 +95,13 @@
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/read_files.h">
 			<Option target="archronis"/>
 		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Headers/write_files_from_archive.h">
+			<Option target="archronis"/>
+		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/compressed_data.cpp">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/converter_int_bits.cpp">
 			<Option target="archronis"/>
 		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/lz77.cpp">
@@ -102,6 +111,9 @@
 			<Option target="archronis"/>
 		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/read_files.cpp">
+			<Option target="archronis"/>
+		</Unit>
+		<Unit filename="/Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp">
 			<Option target="archronis"/>
 		</Unit>
 		<Unit filename="/Users/Peter/CLionProjects/archronis/main.cpp">

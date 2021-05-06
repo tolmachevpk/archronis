@@ -25,13 +25,13 @@ Pair LZ77::find_matching(const std::string &line, const long long &pos) {
     }
 }
 
-void LZ77::encode(const std::string &path) {
+void LZ77::encode(const std::string &path, const std::string &path_for_archive,
+                  const std::string &archive_name) {
     Read_bytes reader;
     long long pos = 1;
     std::string s = reader.read(path);
     if (s.empty()) {
-        std::cout << "Have not files to encode.\n";
-        exit(0);
+        perror("Have not files to encode");
     }
     Node* root = new Node(0, 0, s[0]);
     Node* node = root;
@@ -46,10 +46,36 @@ void LZ77::encode(const std::string &path) {
             c = '\0';
         }
         Node* new_node = new Node(pair.first, pair.second, c);
+        if (pair.second < 0) {
+            perror("length меньше нуля");
+        }
         node->next_node = new_node;
         node = new_node;
         pos += 1;
     }
 
-    //make_archive(root);
+    archive.write_archive(root, path, archive_name);
+}
+
+void LZ77::decode(const std::string &path, std::string path_to_decoding_result) {
+    Node* root = archive.read_archive(path);
+    std::string res = "";
+    Node* node = root;
+
+    while (node != nullptr) {
+        if (node->length > 0) {
+            int start = res.length() - node->offset;
+            for (int i = 0; i < node->length; i++) {
+                res.push_back(res[start + i]);
+            }
+        }
+        res.push_back(node->next);
+        Node* new_node = node->next_node;
+        free(node);
+        node = new_node;
+    }
+
+    Return_files result;
+    result.uncompressed_files(path_to_decoding_result, res,
+                              std::filesystem::path(path).filename());
 }

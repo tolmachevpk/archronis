@@ -141,13 +141,41 @@ CMakeFiles/archronis.dir/Sources/node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/archronis.dir/Sources/node.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Peter/CLionProjects/archronis/Sources/node.cpp -o CMakeFiles/archronis.dir/Sources/node.cpp.s
 
+CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o: CMakeFiles/archronis.dir/flags.make
+CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o: ../Sources/converter_int_bits.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o -c /Users/Peter/CLionProjects/archronis/Sources/converter_int_bits.cpp
+
+CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Peter/CLionProjects/archronis/Sources/converter_int_bits.cpp > CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.i
+
+CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Peter/CLionProjects/archronis/Sources/converter_int_bits.cpp -o CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.s
+
+CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o: CMakeFiles/archronis.dir/flags.make
+CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o: ../Sources/write_files_from_archive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o -c /Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp
+
+CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp > CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.i
+
+CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp -o CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.s
+
 # Object files for target archronis
 archronis_OBJECTS = \
 "CMakeFiles/archronis.dir/main.cpp.o" \
 "CMakeFiles/archronis.dir/Sources/read_files.cpp.o" \
 "CMakeFiles/archronis.dir/Sources/lz77.cpp.o" \
 "CMakeFiles/archronis.dir/Sources/compressed_data.cpp.o" \
-"CMakeFiles/archronis.dir/Sources/node.cpp.o"
+"CMakeFiles/archronis.dir/Sources/node.cpp.o" \
+"CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o" \
+"CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o"
 
 # External object files for target archronis
 archronis_EXTERNAL_OBJECTS =
@@ -157,9 +185,11 @@ archronis: CMakeFiles/archronis.dir/Sources/read_files.cpp.o
 archronis: CMakeFiles/archronis.dir/Sources/lz77.cpp.o
 archronis: CMakeFiles/archronis.dir/Sources/compressed_data.cpp.o
 archronis: CMakeFiles/archronis.dir/Sources/node.cpp.o
+archronis: CMakeFiles/archronis.dir/Sources/converter_int_bits.cpp.o
+archronis: CMakeFiles/archronis.dir/Sources/write_files_from_archive.cpp.o
 archronis: CMakeFiles/archronis.dir/build.make
 archronis: CMakeFiles/archronis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable archronis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Peter/CLionProjects/archronis/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable archronis"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/archronis.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

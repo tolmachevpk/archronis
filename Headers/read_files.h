@@ -1,6 +1,7 @@
 #ifndef ARCHRONIS_READ_FILES_H
 #define ARCHRONIS_READ_FILES_H
 
+#include "converter_int_bits.h"
 #include <fstream>
 
 class Read_bytes {
@@ -10,7 +11,7 @@ public:
 private:
     void read_file(std::ifstream &fin, std::string &res); // for only binary mode
     void add_header(std::string &res, const std::string &path);
-    std::string int_to_bytes(const long long &len);
+    Converter converter;
 };
 
 #endif //ARCHRONIS_READ_FILES_H
