@@ -25,6 +25,9 @@ void Return_files::uncompressed_files(const std::string &path_to_decoding_result
         for (j = i; (s[j] != '\0') && (j < s.length()); j++) {
             fname.push_back(s[j]);
         }
+        if (fname.empty()) {
+            break;
+        }
         j = i + 150;
         int a = s.length();
         if (j >= s.length()) {

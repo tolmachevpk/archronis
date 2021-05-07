@@ -6,49 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/Peter/CLionProjects/archronis/Headers/compressed_data.h
-node.h
-/Users/Peter/CLionProjects/archronis/Headers/node.h
-converter_int_bits.h
 /Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
 iostream
 -
 
-/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
-iostream
--
-
-/Users/Peter/CLionProjects/archronis/Headers/lz77.h
-read_files.h
-/Users/Peter/CLionProjects/archronis/Headers/read_files.h
-node.h
-/Users/Peter/CLionProjects/archronis/Headers/node.h
-compressed_data.h
-/Users/Peter/CLionProjects/archronis/Headers/compressed_data.h
-write_files_from_archive.h
 /Users/Peter/CLionProjects/archronis/Headers/write_files_from_archive.h
+converter_int_bits.h
+/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
 iostream
 -
 
-/Users/Peter/CLionProjects/archronis/Headers/node.h
-
-/Users/Peter/CLionProjects/archronis/Headers/read_files.h
-converter_int_bits.h
-/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
+/Users/Peter/CLionProjects/archronis/Sources/write_files_from_archive.cpp
+filesystem
+-
 fstream
 -
-
+../Headers/write_files_from_archive.h
 /Users/Peter/CLionProjects/archronis/Headers/write_files_from_archive.h
-converter_int_bits.h
-/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
-iostream
--
-
-/Users/Peter/CLionProjects/archronis/main.cpp
-iostream
--
-cstring
--
-Headers/lz77.h
-/Users/Peter/CLionProjects/archronis/Headers/lz77.h
 

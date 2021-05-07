@@ -60,8 +60,9 @@ void Read_bytes::read_file(std::ifstream &fin, std::string &res) {
     for (;;) {
         char c;
         if (fin.get(c)) {
+            res.push_back(c);
+        } else {
             break;
         }
-        res.push_back(c);
     }
 }
