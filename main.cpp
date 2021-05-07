@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "Headers/lz77.h"
 
 /*
@@ -9,12 +10,35 @@
 using namespace std;
 
 int main(int ac, char* av[]) {
-    LZ77 lz77 = *(new LZ77);
-    if (false) {
-        lz77.encode("/Users/Peter/Downloads/27-A-2.txt",
-                    "/Users/Peter/CLionProjects/archronis/for_tests", "my_archive.tpk");
+    if (ac == 1) {
+        perror("too little arguments");
+    }
+    if (strcmp(av[1], "e") == 0) {
+        if (ac == 5) {
+            string path_to_file_or_dir = av[2];
+            string path_to_dir_for_archive = av[3];
+            string name_for_new_archive = av[4];
+
+            LZ77 *lz77 = new LZ77();
+            lz77->encode(path_to_file_or_dir, path_to_dir_for_archive, name_for_new_archive);
+            delete lz77;
+        } else {
+            perror("wrong amount of arguments");
+        }
     } else {
-        lz77.decode("/Users/Peter/CLionProjects/archronis/for_tests/my_archive.tpk",
-                    "/Users/Peter/CLionProjects/archronis/for_tests/");
+        if (strcmp(av[1], "d") == 0) {
+            if (ac == 4) {
+                string path_to_archive = av[2];
+                string path_for_decode_data = av[3];
+
+                LZ77 *lz77 = new LZ77();
+                lz77->decode(path_to_archive, path_for_decode_data);
+                delete lz77;
+            } else {
+                perror("wrong amount of arguments");
+            }
+        } else {
+            perror("was't choose mode [e] or [d]");
+        }
     }
 }
