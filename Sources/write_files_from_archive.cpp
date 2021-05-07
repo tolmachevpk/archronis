@@ -4,6 +4,7 @@
 
 void Return_files::uncompressed_files(const std::string &path_to_decoding_result, const std::string &s,
                                       const std::string &name_of_archived_file) {
+    // Получаю пути для директории вывода
     std::string name_of_dir = name_of_archived_file.substr(0, name_of_archived_file.find('.'));
     std::string cur_dir = path_to_decoding_result;
     if (cur_dir.empty()) {
@@ -16,17 +17,20 @@ void Return_files::uncompressed_files(const std::string &path_to_decoding_result
         }
     }
     std::filesystem::create_directory(cur_dir);
+
+    // заполняю директорию файлами
     for(int i = 0; i < s.length();) {
-        std::string fname;
+        std::string fname = ""s;
         int j;
         for (j = i; (s[j] != '\0') && (j < s.length()); j++) {
             fname.push_back(s[j]);
         }
         j = i + 150;
+        int a = s.length();
         if (j >= s.length()) {
-            perror("uncompressed_files work uncorrectly");
+            perror("decompressed_files work uncorrectly");
         }
-        std::string fdata_size;
+        std::string fdata_size = ""s;
         for (int z = j; z < j + 8; z++) {
             fdata_size.push_back(s[z]);
         }

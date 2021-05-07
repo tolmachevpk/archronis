@@ -47,19 +47,19 @@ void LZ77::encode(const std::string &path, const std::string &path_for_archive,
         }
         Node* new_node = new Node(pair.first, pair.second, c);
         if (pair.second < 0) {
-            perror("length меньше нуля");
+            perror("length less than zero");
         }
         node->next_node = new_node;
         node = new_node;
         pos += 1;
     }
 
-    archive.write_archive(root, path, archive_name);
+    archive.write_archive(root, path_for_archive, archive_name);
 }
 
 void LZ77::decode(const std::string &path, std::string path_to_decoding_result) {
     Node* root = archive.read_archive(path);
-    std::string res = "";
+    std::string res = ""s;
     Node* node = root;
 
     while (node != nullptr) {
@@ -70,7 +70,7 @@ void LZ77::decode(const std::string &path, std::string path_to_decoding_result) 
             }
         }
         res.push_back(node->next);
-        Node* new_node = node->next_node;
+        Node* new_node = (node->next_node);
         free(node);
         node = new_node;
     }

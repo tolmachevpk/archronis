@@ -15,26 +15,32 @@ void Compressed_data::add_node_to_archive(std::ofstream &fout, Node *node) {
 }
 
 Node* Compressed_data::read_node_from_archive(std::ifstream &fin) {
-    std::string offset, length;
+    std::string offset = ""s, length = ""s;
     char next;
     for (int i = 0; i < 4; i++) {
-        char c = fin.get();
-        if (c == EOF) {
+        char c;
+        if (fin.get(c)) {
+            offset.push_back(c);
+        } else {
+            perror("EOF read offset in Compressed_data::read_node_from_archive");
             return nullptr;
         }
-        offset.push_back(c);
     }
     for (int i = 0; i < 4; i++) {
-        char c = fin.get();
-        if (c == EOF) {
+        char c;
+        if (fin.get(c)) {
+            length.push_back(c);
+        } else {
+            perror("EOF read length in Compressed_data::read_node_from_archive");
             return nullptr;
         }
-        length.push_back(c);
     }
     char c;
-    c = fin.get();
-    if (c != EOF) {
+    if (fin.get(c)) {
         next = c;
+    } else {
+        perror("EOF read next in Compressed_data::read_node_from_archive");
+        return nullptr;
     }
     Node* node = new Node(converter.bytes_to_val(4, offset), converter.bytes_to_val(4, length), next);
     return node;
@@ -49,10 +55,21 @@ Node* Compressed_data::read_archive(const std::string &path) {
     if (fin.eof()) {
         perror("archive was empty");
     }
+
+    if (std::filesystem::file_size(path) % 9 > 0) {
+        perror("Check file_size in compressed_dara.cpp (read)");
+    }
+
     Node* root = read_node_from_archive(fin);
+    if (root == nullptr) {
+        perror("root is nullptr in Compressed_data::read_archive");
+    }
     Node* node = root;
     while (!fin.eof()) {
         Node* new_node = read_node_from_archive(fin);
+        if (node == nullptr) {
+            break;
+        }
         node->next_node = new_node;
         node = new_node;
     }
@@ -63,24 +80,22 @@ Node* Compressed_data::read_archive(const std::string &path) {
 void Compressed_data::write_archive(Node *root, const std::string &path,
                                     const std::string &filename) {
     std::ofstream fout;
+    std::string final_path = ""s;
     if (path.length() == 0) {
-        fout.open(filename, std::ios::out | std::ios::binary);
-        if (!fout.is_open()) {
-            perror("can't create archive");
-        }
+        final_path += filename;
     } else {
         if (path[path.length() - 1] == '/') {
-            fout.open(path + filename, std::ios::out | std::ios::binary);
-            if (!fout.is_open()) {
-                perror("can't create archive");
-            }
+            final_path += path + filename;
         } else {
-            fout.open(path + "/" + filename, std::ios::out | std::ios::binary);
-            if (!fout.is_open()) {
-                perror("can't create archive");
-            }
+            final_path += path + "/" + filename;
         }
     }
+
+    fout.open(final_path, std::ios::out | std::ios::binary);
+    if (!fout.is_open()) {
+        perror("can't create archive");
+    }
+
     Node* node = root;
     while (node != nullptr) {
         add_node_to_archive(fout, node);
@@ -89,4 +104,7 @@ void Compressed_data::write_archive(Node *root, const std::string &path,
         node = new_node;
     }
     fout.close();
+    if (std::filesystem::file_size(final_path) % 9 > 0) {
+        perror("Check file_size in compressed_dara.cpp (write)");
+    }
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Headers/lz77.h"
-#include <fstream>
 
 /*
  * Для кодирования сделаю файл, который хранит в 150 байтах название, в 8 байтах размер,
@@ -9,10 +8,10 @@
 
 using namespace std;
 
-int main() {
+int main(int ac, char* av[]) {
     LZ77 lz77 = *(new LZ77);
     if (false) {
-        lz77.encode("/Users/Peter/CLionProjects/archronis/for_tests",
+        lz77.encode("/Users/Peter/Downloads/27-A-2.txt",
                     "/Users/Peter/CLionProjects/archronis/for_tests", "my_archive.tpk");
     } else {
         lz77.decode("/Users/Peter/CLionProjects/archronis/for_tests/my_archive.tpk",

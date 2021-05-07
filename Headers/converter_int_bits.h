@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+using namespace std::literals::string_literals;
+
 class Converter {
 public:
     std::string val_to_bytes(const int &size, const long long &number);

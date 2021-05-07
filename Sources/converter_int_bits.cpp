@@ -6,7 +6,7 @@ std::string Converter::val_to_bytes(const int &size, const long long &number) {
         val *= 256;
     }
     unsigned long long byte = 255 * val;
-    std::string res;
+    std::string res = ""s;
     for (int i = (size - 1); i >= 0; i--) {
         res.push_back(static_cast<unsigned char>( (number & byte) / val));
         val /= 256;

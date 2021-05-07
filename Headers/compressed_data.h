@@ -5,6 +5,8 @@
 #include "converter_int_bits.h"
 #include <iostream>
 
+using namespace std::literals::string_literals;
+
 /*
  * Хранить информацию будем в таком виде: 4 байта - offset, 4 байта - length и 1 байт - next.
  */
