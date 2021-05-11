@@ -54,7 +54,9 @@ void LZ77::encode(const std::string &path, const std::string &path_for_archive,
         pos += 1;
     }
 
-    archive.write_archive(root, path_for_archive, archive_name);
+    std::string full_archive_name = archive_name + ".tpk";
+
+    archive.write_archive(root, path_for_archive, full_archive_name);
 }
 
 void LZ77::decode(const std::string &path, std::string path_to_decoding_result) {

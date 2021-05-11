@@ -29,7 +29,6 @@ void Return_files::uncompressed_files(const std::string &path_to_decoding_result
             break;
         }
         j = i + 150;
-        int a = s.length();
         if (j >= s.length()) {
             perror("decompressed_files work uncorrectly");
         }

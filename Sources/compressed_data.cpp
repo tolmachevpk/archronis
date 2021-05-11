@@ -22,7 +22,7 @@ Node* Compressed_data::read_node_from_archive(std::ifstream &fin) {
         if (fin.get(c)) {
             offset.push_back(c);
         } else {
-            perror("EOF read offset in Compressed_data::read_node_from_archive");
+            //perror("EOF read offset in Compressed_data::read_node_from_archive");
             return nullptr;
         }
     }
