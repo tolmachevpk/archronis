@@ -8,21 +8,40 @@ Pair LZ77::find_matching(const std::string &line, const long long &pos) {
     if (pos == 0) {
         return {0, 0};
     }
-    long long right = (pos > 0) ? pos - 1 : 0;
     long long left = ((pos - max_buf_size) < 0) ? 0 : (pos - max_buf_size);
 
-    long long i;
-    for (i = right; (i >= left) && (line[i] != line[pos]); i--) {}
+    long long i = left;
+    long long j = pos;
+    long long best_start_pos = -1;
+    long long cur_pos_of_start = -1;
+    long long max_size = 0;
 
-    if (i >= left) {
-        int k = 1;
-        while ((line[i + k] == line[pos + k]) && (pos + k < line.length())) {
-            k++;
+    int k = 0;
+    while ((i < line.length()) && (j < line.length()) && ((i < pos) || (line[i] == line[j]))) {
+        if (i == j) {
+            break;
         }
-        return {static_cast<int>(pos - i), k};
-    } else {
+        if (line[i] != line[j]) {
+            k = 0;
+            j = pos;
+        }
+        if (line[i] == line[j]) {
+            if (k == 0) {
+                cur_pos_of_start = i;
+            }
+            k++;
+            j++;
+        }
+        if (k > max_size) {
+            best_start_pos = cur_pos_of_start;
+            max_size = k;
+        }
+        i++;
+    }
+    if (best_start_pos == -1) {
         return {0, 0};
     }
+    return {static_cast<int>(pos - best_start_pos), static_cast<int>(max_size)};
 }
 
 void LZ77::encode(const std::string &path, const std::string &path_for_archive,

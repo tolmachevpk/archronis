@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
+iostream
+-
+
+/Users/Peter/CLionProjects/archronis/Headers/read_files.h
+converter_int_bits.h
+/Users/Peter/CLionProjects/archronis/Headers/converter_int_bits.h
+fstream
+-
+
+/Users/Peter/CLionProjects/archronis/Sources/read_files.cpp
+../Headers/read_files.h
+/Users/Peter/CLionProjects/archronis/Headers/read_files.h
+iostream
+-
+

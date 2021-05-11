@@ -44,11 +44,7 @@ converter_int_bits.h
 iostream
 -
 
-/Users/Peter/CLionProjects/archronis/main.cpp
-iostream
--
-getopt.h
--
-Headers/lz77.h
+/Users/Peter/CLionProjects/archronis/Sources/lz77.cpp
+../Headers/lz77.h
 /Users/Peter/CLionProjects/archronis/Headers/lz77.h
 
