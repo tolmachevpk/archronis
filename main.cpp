@@ -2,13 +2,6 @@
 #include <getopt.h>
 #include "Headers/lz77.h"
 
-/*
- * Для кодирования сделаю файл, который хранит в 150 байтах название, в 8 байтах размер,
- * дальше уже контент
- */
-
-using namespace std::literals::string_literals;
-
 int main(int ac, char* av[]) {
     int rez = 0;
     bool encode = false;
